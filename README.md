@@ -27,6 +27,15 @@ I also had to think about saving tasks after a page refresh. I used `localStorag
 
 *Before submitting, adjust this answer so it reflects the problems you personally ran into while running and testing the project.*
 
+## Question 3: What was your approach to component composition and state management?
+
+
+I tried to keep each component focused on one main job instead of putting everything in one large file. `Dashboard` is the main component that holds the task list and handles adding, editing, deleting, and updating tasks. `TaskForm` handles the input fields and validation. `TaskFilter` handles searching, filtering, and sorting. `TaskList` displays the tasks, and `TaskItem` displays an individual task.
+
+I kept the main task state in `Dashboard` because multiple components need to use or update the same data. I passed information down through props and passed callback functions to child components so they could tell the dashboard when something changed. For example, clicking Delete in `TaskItem` calls a function passed down from `Dashboard`, which updates the task list.
+
+I kept the form's input state inside `TaskForm` because those values only need to be managed while the user is filling out the form. I also put filtering, sorting, validation, and date formatting in `taskUtils.ts` so the components would be easier to read.
+
 
 ## Final Thoughts
 
