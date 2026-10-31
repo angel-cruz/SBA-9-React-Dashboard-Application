@@ -1,0 +1,10 @@
+/* Bootstrap handles the grid, buttons, forms, spacing, and responsive layout. */
+/* These small rules give the dashboard its own look without replacing Bootstrap. */
+body { background-color: #f5f7fb; }
+.card { border-radius: 12px; }
+/* Use different badge colors to make priority easy to recognize. */
+.priority-high { background-color: #f8d7da; color: #842029; }
+.priority-medium { background-color: #fff3cd; color: #664d03; }
+.priority-low { background-color: #d1e7dd; color: #0f5132; }
+/* Keep long task names from pushing the card outside its column. */
+.card h3 { overflow-wrap: anywhere; }
